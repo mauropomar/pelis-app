@@ -108,10 +108,31 @@ function getOne(req, res) {
 }
 
 
+function search(req, res){
+    var queryCond = {};
+    var query = req.query;
+    console.log(query);
+    if (query.title) {
+        queryCond.title = {$regex: query.title, $options: "i"}
+    }
+   if (query.type) {
+        queryCond.type = {$regex: query.type, $options: "i"}
+    }
+    Peli.find(queryCond).sort('title').exec((err, datos) => {
+        if (err) return res.status(500).send({ succss: false, message: 'Error en la peticion' });
+        if (!datos) return res.status(400).send({message: 'No hay películas disponibles.'});
+        return res.status(200).send({
+            datos: datos,
+            success: true
+        });
+    });
+}
+
 module.exports = {
     save,
     getAll,
     getOne,
     update,
-    remove
+    remove,
+    search
 }

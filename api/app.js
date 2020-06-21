@@ -29,7 +29,7 @@ app.use((req, res, next) => {
 //rutas
 app.use('/api', user_routes);
 app.use('/api', rol_routes);
-//app.use('/api', peli_routes);
+app.use('/api', peli_routes);
 
 
 

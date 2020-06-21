@@ -284,7 +284,7 @@ module.exports = {
     getOne,
     getAll,
     update,
-    updatePerfil,
+    updatePerfil, 
     uploadImage,
     getImageFile,
     remove,
