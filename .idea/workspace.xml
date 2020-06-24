@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9cd97470-a264-459b-9559-dd95e52c7b84" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/api/routes/pelis.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/pelis.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client" beforeDir="false" afterPath="$PROJECT_DIR$/client" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
@@ -27,7 +26,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/laragon/www/MasterSol" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -52,6 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1592980287318</updated>
       <workItem from="1592980288852" duration="153000" />
+      <workItem from="1592981059181" duration="26000" />
     </task>
     <servers />
   </component>
@@ -63,7 +63,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
