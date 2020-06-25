@@ -10,31 +10,35 @@ var path = require('path');
 
 //metodo de login
 function login(req, res) {
-    var params = req.body;
+    var params = req.body.params;
     var email = params.email;
     var password = params.password;
-
     User.findOne({email: email}, (err, user) => {
             if (err) return res.status(500).send({message: 'Error de peticion'});
             if (user) {
                 bcrypt.compare(password, user.password, (err, check) => {
-                    if (check) {
-                        if (params.gettoken) {
-                            //devolver  y generar token
+                    console.log(check)
+                    if (check) {                      
                             res.status(200).send({
+                                success:true,
                                 user: user,
                                 token: jwt.createToken(user),
                             });
-                        }
                     } else {
-                        return res.status(404).send({message: 'Usuario y/o contraseña incorrecta.'})
+                        return res.status(404).send({
+                            success:false,
+                            message: 'Usuario y/o contraseña incorrecta.'
+                        })
                     }
                 })
             } else {
-                return res.status(404).send({message: 'El usuario no se ha podido identificar!!!'})
+                return res.status(404).send({
+                    success:false,
+                    message: 'El usuario no se ha podido identificar!!!'
+                })
             }
         }
-    ).populate('sucursal')
+    )
 }
 
 //salva los datos de un usuario
